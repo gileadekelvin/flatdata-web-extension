@@ -1,4 +1,4 @@
-# Flatdata Viewer web Extension
+# Flatdata Viewer web extension (unofficial)
 
 ### A web extension for Chrome which adds a icon on github for opening the file on FlatData Viewer.
 
@@ -10,7 +10,6 @@ This extension is aiming to add a button on the page of a file in github to redi
 
 You don't need to type the repository on Flatdata form, just click the button and enjoy!
 
-<br>
 
 ## How to Contribute
 

@@ -1,7 +1,7 @@
 {
-  "name": "Access Flatdata for Github (unofficial)",
+  "name": "Flatdata Viewer web extension",
   "description": "Build an Extension!",
-  "version": "1.0",
+  "version": "0.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -9,7 +9,8 @@
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "action": {
     "default_popup": "src/popup/popup.html",
@@ -26,5 +27,11 @@
     "48": "/images/get_started48.png",
     "128": "/images/get_started128.png"
   },
-  "options_page": "src/options/options.html"
+  "options_page": "src/options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "js": ["src/popup/content.js"]
+    }
+  ]
 }
