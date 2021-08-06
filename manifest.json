@@ -31,7 +31,8 @@
   "content_scripts": [
     {
       "matches": ["https://*.github.com/*"],
-      "js": ["src/popup/content.js"]
+      "js": ["src/popup/content.js"],
+      "run_at": "document_end"
     }
   ]
 }
