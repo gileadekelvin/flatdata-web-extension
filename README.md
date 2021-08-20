@@ -12,6 +12,18 @@ You don't need to type the repository on Flatdata form, just click the button an
 
 To visualize more examples of data access https://github.com/the-pudding/data
 
+## How to install
+
+0. Clone this repository
+
+1. Go to chrome://extensions/
+
+2. Check the box for Developer mode in the top right
+
+3. Click Load Unpacked (top left)
+
+4. Select the repo folder location
+
 ## How to Contribute
 
 You are free to contribute with this extension.

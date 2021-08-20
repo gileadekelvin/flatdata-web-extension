@@ -1,13 +1,3 @@
-// TEST IF CONTENT SCRIPT IS WORKING
-
-// console.log("FlatData Extension working");
-
-// let paragraphs = document.getElementsByTagName("p");
-
-// for (elem of paragraphs) {
-//   elem.style["background-color"] = "green";
-// }
-
 // INIT
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // listen for messages sent from background.js
