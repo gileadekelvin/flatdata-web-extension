@@ -10,6 +10,7 @@ This extension is aiming to add a button on the page of a file in github to redi
 
 You don't need to type the repository on Flatdata form, just click the button and enjoy!
 
+To visualize more examples of data access https://github.com/the-pudding/data
 
 ## How to Contribute
 

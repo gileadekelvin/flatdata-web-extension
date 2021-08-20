@@ -11,8 +11,7 @@
 // INIT
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // listen for messages sent from background.js
-  if (request.message === "hello!") {
-    console.log(request.url); // new url is now in content scripts!
+  if (request.message === "PAGE_LOADED") {
     addFlatDataButton();
   }
 });
@@ -33,7 +32,11 @@ const addFlatDataButton = () => {
 
   // Get path to the data inside repository
   const tabURL = window.location.href;
-  const parsedDataPath = tabURL.match(/blob\/(.*)/)[1].match(/\/(.*)/)[1];
+  const blobPath = tabURL.match(/blob\/(.*)/);
+  if (!blobPath) {
+    return false;
+  }
+  const parsedDataPath = blobPath[1].match(/\/(.*)/)[1];
 
   // Button definition
   const btn = document.createElement("DIV");
@@ -56,16 +59,16 @@ const addFlatDataButton = () => {
   btn.onclick = function () {
     const url = `https://flatgithub.com/${owner}/${repository}?filename=${parsedDataPath}&sha=${parsedCommitSha}`;
     window.open(url, "_blank").focus();
-    return false;
   };
 
   // add button to div
   const btnGroup = document.getElementsByClassName(
     "d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between hide-sm hide-md"
   )[0];
-  console.log("btnGroup", btnGroup);
+
+  if (!btnGroup) {
+    return false;
+  }
 
   btnGroup.appendChild(btn);
 };
-
-addFlatDataButton();
