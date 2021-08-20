@@ -10,6 +10,10 @@ This extension is aiming to add a button on the page of a file in github to redi
 
 You don't need to type the repository on Flatdata form, just click the button and enjoy!
 
+The button is added next to the delete icon.
+
+![example](images/extension-example.png)
+
 To visualize more examples of data access https://github.com/the-pudding/data
 
 ## How to install
