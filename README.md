@@ -1,4 +1,4 @@
-# Flatdata Viewer web extension (unofficial)
+# Flatdata Viewer web extension (unofficial extension)
 
 ### A web extension for Chrome which adds a icon on github for opening the file on FlatData Viewer.
 
